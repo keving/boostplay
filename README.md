@@ -31,5 +31,28 @@ Playing with Boost Python / following tutorials.
     Driving mini at 50mph
     >>> 
 
+# library
 
+
+    kagy@kagy3:~/git/boostplay/library$ python3 setup.py clean
+    running clean
+    removing 'build/temp.linux-x86_64-3.5' (and everything under it)
+    removing 'build'
+    kagy@kagy3:~/git/boostplay/library$ python3 setup.py build_ext --inplace
+    running build_ext
+    kagy@kagy3:~/git/boostplay/library$ ls -l
+    total 48
+    -rw-r--r-- 1 kagy primarygroup  3187 May 19 14:08 library.c
+    -rwxr-xr-x 1 kagy primarygroup 33288 May 19 14:08 library.cpython-35m-x86_64-linux-gnu.so
+    -rw-r--r-- 1 kagy primarygroup   518 May 19 13:51 library.h
+    -rw-r--r-- 1 kagy primarygroup   238 May 19 13:56 setup.py
+    kagy@kagy3:~/git/boostplay/library$ python3
+    Python 3.5.3 (default, Jan 19 2017, 14:11:04) 
+    [GCC 6.3.0 20170118] on linux
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> import library
+    >>> library.version()
+    'Version 1.0'
+    >>> 
+    
 
